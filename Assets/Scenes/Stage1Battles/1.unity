@@ -3918,7 +3918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271fb5a04b601d64b9ae24f3014b3ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 100
+  damageAmount: 1
   attackKey: 32
   targetEnemy: {fileID: 2108135877}
   panelToDisableAfterAttack: {fileID: 1791122625}
