@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    public Playerheatlh playerHealth; // Corrected the typo in the class name
+    public Playerhealth playerHealth; // Corrected the typo in the class name
     public Image fillImage;
     private Slider slider;
 

@@ -10,15 +10,26 @@ public class ButtonManager : MonoBehaviour
     public List<Image> imagePrefabs; // List of UI Image prefabs
 
     private List<Image> currentImages = new List<Image>();
+    public GameObject attackBtn;
+  
 
     void Start()
     {
         HideImages();
+        HideAttackButton();
     }
 
     void Update()
     {
-
+        // Check if both snap point areas are occupied, then show the attack button
+        if (IsSnapPointAreaOccupied(0) && IsSnapPointAreaOccupied(1))
+        {
+            ShowAttackButton();
+        }
+        else
+        {
+            HideAttackButton();
+        }
     }
 
     public void PressedButton1()
@@ -64,7 +75,17 @@ public class ButtonManager : MonoBehaviour
         return currentImages.Any(image => image != null && image.transform.parent == snapPointAreas[index]);
     }
 
-    public  void HideImages()
+    void ShowAttackButton()
+    {    
+        attackBtn.SetActive(true);
+    }
+
+    void HideAttackButton()
+    {
+        attackBtn.SetActive(false);
+    }
+
+    public void HideImages()
     {
         // Destroy the current images if they exist
         foreach (Image image in currentImages)
@@ -72,6 +93,5 @@ public class ButtonManager : MonoBehaviour
             Destroy(image.gameObject);
         }
         currentImages.Clear();
-    }
-  
+    } 
 }

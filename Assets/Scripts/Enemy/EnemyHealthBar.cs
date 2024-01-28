@@ -1,41 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-    public EnemyHeallth enemyHealth;
+    public EnemyHealth enemyHealth; // Assuming the correct class name is EnemyHealth
     public Image fillImage;
     private Slider slider;
 
     private void Awake()
     {
-        slider = GetComponent<Slider>(); 
+        slider = GetComponent<Slider>();
     }
+
     private void Update()
     {
-        if (enemyHealth != null) { 
-        float fillValue = enemyHealth.currentHealth / (float)enemyHealth.maxHealth;
-        slider.value = fillValue;
+        UpdateHealthBar();
+    }
+
+    // Call this function whenever the enemy's health changes
+    public void UpdateHealthBar()
+    {
+        if (enemyHealth != null)
+        {
+            float fillValue = enemyHealth.currentHealth / (float)enemyHealth.maxHealth;
+            slider.value = fillValue;
 
             if (enemyHealth.currentHealth <= 5)
             {
                 fillImage.color = Color.yellow;
             }
-            else { 
+            else
+            {
                 fillImage.color = Color.red;
             }
-            if (fillValue <= slider.minValue)
-            {
-                fillImage.enabled = false;
-            }
-            else if (!fillImage.enabled)
-            {
-                fillImage.enabled = true;
-            }
 
+            fillImage.enabled = (fillValue > slider.minValue); // Simplified visibility check
         }
     }
-
 }
