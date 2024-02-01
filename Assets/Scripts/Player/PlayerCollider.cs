@@ -4,7 +4,17 @@ using UnityEngine.SceneManagement;
 public class PlayerCollider : MonoBehaviour
 {
     public GameObject player; // Reference to the player GameObject
+    public GameObject AlmanacPanel;
 
+    public void ShowAlmanac()
+    {
+        if(AlmanacPanel != null)
+        {
+            bool isActive = AlmanacPanel.activeSelf;
+            AlmanacPanel.SetActive(!isActive);
+        }
+
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("CheckPoint1"))
@@ -54,6 +64,11 @@ public class PlayerCollider : MonoBehaviour
 
         Debug.Log("Player Data Loaded.");
     }
+    public void YouWonLvl1()
+    {
+        //Load the next Scenes
+       // SceneManager.LoadScene();
+   }
 
     private void SpawnPlayerAtLastCheckpoint()
     {

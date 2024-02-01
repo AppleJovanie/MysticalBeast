@@ -11,7 +11,7 @@ public class ButtonManager : MonoBehaviour
 
     private List<Image> currentImages = new List<Image>();
     public GameObject attackBtn;
-  
+    public List<GameObject> CardElements = new List<GameObject>();
 
     void Start()
     {
@@ -47,6 +47,9 @@ public class ButtonManager : MonoBehaviour
         ShowNextImage(2);
     }
 
+    //Elements buttons
+
+
     void ShowNextImage(int imageIndex)
     {
         // Iterate through snap point areas to find the first available one
@@ -74,6 +77,7 @@ public class ButtonManager : MonoBehaviour
         // Check if the snap point area at this index is occupied
         return currentImages.Any(image => image != null && image.transform.parent == snapPointAreas[index]);
     }
+
 
     void ShowAttackButton()
     {    

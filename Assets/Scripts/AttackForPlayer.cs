@@ -1,14 +1,16 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackForPlayer : MonoBehaviour
 {
-    public float damageAmount = 10f; // Adjust this value based on your game's balancing
+    private int damageAmount; // Adjust this value based on your game's balancing
     public KeyCode attackKey = KeyCode.Space; // Change this to the desired attack key
     public GameObject targetEnemy; // Reference to the enemy GameObject
     public GameObject panelToDisableAfterAttack;
     public ButtonManager buttonManager;
+
 
     void Update()
     {
@@ -35,11 +37,13 @@ public class AttackForPlayer : MonoBehaviour
     public void OnAttackButtonPressed()
     {
         DisableCanvas();
-        // Add any additional logic you want to perform when the attack button is pressed
+
     }
+ 
 
     public void Attack()
-    { 
+    {
+        damageAmount = Random.Range(5, 10);
         DisableCanvas();
         if (targetEnemy != null)
         {
@@ -49,6 +53,7 @@ public class AttackForPlayer : MonoBehaviour
             // If the object has an EnemyHealth script, reduce its health
             if (enemyHealth != null)
             {
+                Debug.Log(damageAmount);
                 enemyHealth.TakeDamage(damageAmount);
             }
         }

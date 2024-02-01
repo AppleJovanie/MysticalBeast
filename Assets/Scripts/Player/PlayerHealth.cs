@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Playerhealth : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Playerhealth : MonoBehaviour
     public Text healthText; // Reference to a UI text element to display health (optional)
     public GameObject panelToEnableAfterDamage; // Reference to the panel you want to enable
     public ButtonManager buttonManager;
+    public GameObject gameOverPanel;
 
     void Start()
     {
@@ -17,6 +19,7 @@ public class Playerhealth : MonoBehaviour
         // Update UI text (optional)
         UpdateHealthText();
     }
+    
 
     public void TakeDamage(int damage)
     {
@@ -38,8 +41,20 @@ public class Playerhealth : MonoBehaviour
 
     void Die()
     {
-        // Implement death behavior (e.g., respawn or game over)
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+
         Debug.Log("Player died");
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene(2);
     }
 
     void UpdateHealthText()
