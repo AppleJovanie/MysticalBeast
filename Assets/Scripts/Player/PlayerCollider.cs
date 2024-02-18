@@ -17,17 +17,10 @@ public class PlayerCollider : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("CheckPoint1"))
+        if (collision.gameObject.CompareTag("Hydrogen"))
         {
-            // Save the checkpoint position and scene before destroying it
-            SaveCheckpointData(collision.transform.position, SceneManager.GetActiveScene().name);
-
-            // Destroy the checkpoint object
-            Destroy(collision.gameObject);
-
-            // Load the battle scene
-            SceneManager.LoadScene("BattleScene");
-            Debug.Log("You reached Checkpoint 1");
+            SceneManager.LoadScene(1);
+            Debug.Log("Hydrogen");
         }
     }
 

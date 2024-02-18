@@ -16,7 +16,7 @@ public class Healthbar : MonoBehaviour
 
     void Start()
     {
-        // You can initialize or set up anything needed here
+      
     }
 
     // Update is called once per frame
