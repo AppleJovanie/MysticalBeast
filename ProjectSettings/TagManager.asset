@@ -8,6 +8,10 @@ TagManager:
   - SnapArea1
   - SnapArea2
   - CheckPoint1
+  - RubidiumEnemy
+  - PotassiumEnemy
+  - SodiumEnemy
+  - LithiumEnemy
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,4 @@ public class ProceedToNextScene : MonoBehaviour
 
         SceneManager.LoadScene("MainScene2");
 }
-
-
 }

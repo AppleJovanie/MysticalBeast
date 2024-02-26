@@ -32,24 +32,32 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    public void PressedButton1()
+    public void Hydrogen()
     {
         ShowNextImage(0);
     }
 
-    public void PressedButton2()
+    public void Lithium()
     {
         ShowNextImage(1);
     }
 
-    public void PressedButton3()
+    public void Sodium()
     {
         ShowNextImage(2);
+    }
+    public void Potassium()
+    {
+        ShowNextImage(3);
+    }
+    public void Rubidium()
+    {
+        ShowNextImage(4);
     }
 
     //Elements buttons
 
-
+      
     void ShowNextImage(int imageIndex)
     {
         // Iterate through snap point areas to find the first available one

@@ -19,7 +19,27 @@ public class PlayerCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Hydrogen"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
+            Debug.Log("Hydrogen");
+        }
+        if (collision.gameObject.CompareTag("LithiumEnemy"))
+        {
+            SceneManager.LoadScene(4);
+            Debug.Log("Hydrogen");
+        }
+        if (collision.gameObject.CompareTag("SodiumEnemy"))
+        {
+            SceneManager.LoadScene(6);
+            Debug.Log("Hydrogen");
+        }
+        if (collision.gameObject.CompareTag("PotassiumEnemy"))
+        {
+            SceneManager.LoadScene(8);
+            Debug.Log("Hydrogen");
+        }
+        if (collision.gameObject.CompareTag("RubidiumEnemy"))
+        {
+            SceneManager.LoadScene(9);
             Debug.Log("Hydrogen");
         }
     }

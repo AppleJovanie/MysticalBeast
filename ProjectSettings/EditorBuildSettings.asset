@@ -6,17 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu/MainMenu.unity
+    guid: c3157d9a72197ac4ea45b632835de67f
+  - enabled: 1
     path: Assets/Scenes/MainScenes/MAP 1/MainScene1.unity
     guid: 8912c28c6046b2a4fac45e5c10bf4106
   - enabled: 1
     path: Assets/Scenes/Stage1Battles/MAP1/Battle1.unity
     guid: ad28243bf15fbc9408c217b5c951f819
   - enabled: 1
-    path: Assets/Scenes/MainMenu/MainMenu.unity
-    guid: c3157d9a72197ac4ea45b632835de67f
-  - enabled: 1
     path: Assets/Scenes/MainScenes/MAP 1/MainScene2.unity
     guid: ff5044d9c81c73740b3dd086c0e328cb
+  - enabled: 1
+    path: Assets/Scenes/Stage1Battles/MAP1/Battle2.unity
+    guid: 10740e06d9268264fa587a97719fa20a
+  - enabled: 1
+    path: Assets/Scenes/Stage1Battles/MAP1/Battle3.unity
+    guid: 3db6423dce5433944aeae70095247ee2
+  - enabled: 1
+    path: Assets/Scenes/Stage1Battles/MAP1/Battle4.unity
+    guid: 6f3215faff998164995874d00177704a
+  - enabled: 1
+    path: Assets/Scenes/Stage1Battles/MAP1/Battle5.unity
+    guid: 2f4c0ba52f783ae46a188a4d878a7e5f
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 8d161768593ef3646bf76755b0fea9d2, type: 2}

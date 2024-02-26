@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +9,7 @@ public class AttackForPlayer : MonoBehaviour
     public GameObject targetEnemy; // Reference to the enemy GameObject
     public GameObject panelToDisableAfterAttack;
     public ButtonManager buttonManager;
-
+    public float criticalChance = 0.3f; // Critical hit chance (30%)
 
     void Update()
     {
@@ -25,6 +24,7 @@ public class AttackForPlayer : MonoBehaviour
     {
         targetEnemy = enemy;
     }
+
     public void DisableCanvas()
     {
         if (panelToDisableAfterAttack != null)
@@ -37,28 +37,36 @@ public class AttackForPlayer : MonoBehaviour
     public void OnAttackButtonPressed()
     {
         DisableCanvas();
-
     }
- 
 
     public void Attack()
     {
         damageAmount = Random.Range(5, 10);
-        DisableCanvas();
+        bool isCritical = Random.value < criticalChance; // Check if the attack is critical
+
+        if (isCritical)
+        {
+            // Apply critical damage (e.g., double the damage)
+            damageAmount *= 2;
+            Debug.Log("Critical Hit!");
+        }
+
         if (targetEnemy != null)
         {
-            // Assuming the enemy has an EnemyHeallth script attached
+            // Assuming the enemy has an EnemyHealth script attached
             EnemyHealth enemyHealth = targetEnemy.GetComponent<EnemyHealth>();
 
             // If the object has an EnemyHealth script, reduce its health
             if (enemyHealth != null)
             {
-                Debug.Log(damageAmount);
+                Debug.Log("Damage: " + damageAmount);
                 enemyHealth.TakeDamage(damageAmount);
             }
         }
+
         ResetSnapAreas();
     }
+
     void ResetSnapAreas()
     {
         // Reset snap areas logic goes here
@@ -67,5 +75,4 @@ public class AttackForPlayer : MonoBehaviour
             buttonManager.HideImages(); // Call the HideImages method from the ButtonManager
         }
     }
-
 }
