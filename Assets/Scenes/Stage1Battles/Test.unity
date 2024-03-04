@@ -510,6 +510,8 @@ MonoBehaviour:
   panelToDisableAfterAttack: {fileID: 0}
   buttonManager: {fileID: 0}
   criticalChance: 0.3
+  damageIndicatorText: {fileID: 0}
+  criticalHitText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

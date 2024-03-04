@@ -12,6 +12,8 @@ public class ButtonManager : MonoBehaviour
     private List<Image> currentImages = new List<Image>();
     public GameObject attackBtn;
     public List<GameObject> CardElements = new List<GameObject>();
+    public List<GameObject> CardsToHide = new List<GameObject>();
+
 
     void Start()
     {
@@ -30,6 +32,8 @@ public class ButtonManager : MonoBehaviour
         {
             HideAttackButton();
         }
+
+    
     }
 
     public void Hydrogen()
@@ -57,7 +61,6 @@ public class ButtonManager : MonoBehaviour
 
     //Elements buttons
 
-      
     void ShowNextImage(int imageIndex)
     {
         // Iterate through snap point areas to find the first available one
@@ -88,13 +91,21 @@ public class ButtonManager : MonoBehaviour
 
 
     void ShowAttackButton()
-    {    
+    {
         attackBtn.SetActive(true);
     }
 
     void HideAttackButton()
     {
         attackBtn.SetActive(false);
+    }
+
+    public void HideAllCards()
+    {
+        foreach (GameObject card in CardElements)
+        {
+            card.SetActive(false);
+        }
     }
 
     public void HideImages()
@@ -105,5 +116,7 @@ public class ButtonManager : MonoBehaviour
             Destroy(image.gameObject);
         }
         currentImages.Clear();
-    } 
+    }
+
+  
 }

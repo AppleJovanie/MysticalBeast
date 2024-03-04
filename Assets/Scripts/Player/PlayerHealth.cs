@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Playerhealth : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Playerhealth : MonoBehaviour
     public GameObject panelToEnableAfterDamage; // Reference to the panel you want to enable
     public ButtonManager buttonManager;
     public GameObject gameOverPanel;
+    public Text attackIndicatorText;
+
+    private Coroutine attackTextCoroutine;
 
     void Start()
     {
@@ -19,7 +23,6 @@ public class Playerhealth : MonoBehaviour
         // Update UI text (optional)
         UpdateHealthText();
     }
-    
 
     public void TakeDamage(int damage)
     {
@@ -36,7 +39,30 @@ public class Playerhealth : MonoBehaviour
         {
             // Enable the panel after taking damage
             EnablePanelAfterDamage();
+
+            // Show attack indicator text
+            if (attackIndicatorText != null)
+            {
+                // Reset text visibility
+                attackIndicatorText.gameObject.SetActive(true);
+                attackIndicatorText.text = "Your Turn to Attack!";
+
+                // Start or restart the fade-out coroutine
+                if (attackTextCoroutine != null)
+                {
+                    StopCoroutine(attackTextCoroutine);
+                }
+                attackTextCoroutine = StartCoroutine(FadeOutAttackText());
+            }
         }
+    }
+
+    IEnumerator FadeOutAttackText()
+    {
+        // Wait for 1.5 seconds
+        yield return new WaitForSeconds(1.5f);
+
+        attackIndicatorText.text = ""; // Clear the text
     }
 
     void Die()
@@ -48,10 +74,12 @@ public class Playerhealth : MonoBehaviour
 
         Debug.Log("Player died");
     }
+
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
     public void GoToMenu()
     {
         SceneManager.LoadScene(2);

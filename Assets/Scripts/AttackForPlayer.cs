@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackForPlayer : MonoBehaviour
 {
@@ -9,7 +9,12 @@ public class AttackForPlayer : MonoBehaviour
     public GameObject targetEnemy; // Reference to the enemy GameObject
     public GameObject panelToDisableAfterAttack;
     public ButtonManager buttonManager;
-    public float criticalChance = 0.3f; // Critical hit chance (30%)
+    public float criticalChance = 0.7f; // Critical hit chance (30%)
+
+    public Text damageIndicatorText; // Reference to the shared UI Text element
+    public Text criticalHitText; // Reference to the text element for critical hit message
+    private Coroutine criticalHitCoroutine;
+    private Coroutine damageIndicatorCoroutine;
 
     void Update()
     {
@@ -44,11 +49,32 @@ public class AttackForPlayer : MonoBehaviour
         damageAmount = Random.Range(5, 10);
         bool isCritical = Random.value < criticalChance; // Check if the attack is critical
 
+        // Reset text visibility before triggering the attack
+        if (damageIndicatorText != null)
+        {
+            damageIndicatorText.gameObject.SetActive(true);
+            if (damageIndicatorCoroutine != null)
+            {
+                StopCoroutine(damageIndicatorCoroutine);
+            }
+        }
+
         if (isCritical)
         {
             // Apply critical damage (e.g., double the damage)
-            damageAmount *= 2;
-            Debug.Log("Critical Hit!");
+            int criticalDamage = damageAmount * 2; // Calculate the critical damage amount
+            if (criticalHitText != null)
+            {
+                criticalHitText.text = "Critical Hit! Critical Damage: " + criticalDamage;
+                // Stop previous coroutine if it's running
+                if (criticalHitCoroutine != null)
+                {
+                    StopCoroutine(criticalHitCoroutine);
+                }
+                criticalHitCoroutine = StartCoroutine(FadeOutTextAfterDelay(criticalHitText));
+            }
+            // Update the damageAmount variable with the critical damage
+            damageAmount = criticalDamage;
         }
 
         if (targetEnemy != null)
@@ -59,12 +85,29 @@ public class AttackForPlayer : MonoBehaviour
             // If the object has an EnemyHealth script, reduce its health
             if (enemyHealth != null)
             {
-                Debug.Log("Damage: " + damageAmount);
                 enemyHealth.TakeDamage(damageAmount);
             }
         }
 
+        // Update damage indicator text
+        if (damageIndicatorText != null)
+        {
+            damageIndicatorText.text = "Damage: " + damageAmount.ToString();
+            // Start the coroutine to clear damage indicator text
+            damageIndicatorCoroutine = StartCoroutine(FadeOutTextAfterDelay(damageIndicatorText));
+        }
+
         ResetSnapAreas();
+    }
+
+
+    IEnumerator FadeOutTextAfterDelay(Text text)
+    {
+        // Wait for 2 seconds
+        yield return new WaitForSeconds(2f);
+
+        // Clear the text
+        text.text = "";
     }
 
     void ResetSnapAreas()

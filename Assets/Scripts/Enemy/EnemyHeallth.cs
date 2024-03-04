@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -9,9 +10,19 @@ public class EnemyHealth : MonoBehaviour
     public float delayBeforeDamage = 2f; // Delay in seconds before applying damage
     public GameObject youWonPanel;
 
+    public Text damageReceivedText;
+
+    private ButtonManager buttonManager; // Reference to the ButtonManager script
+
     void Start()
     {
         currentHealth = maxHealth;
+
+        // Get the ButtonManager script attached to the player
+        if (player != null)
+        {
+            buttonManager = player.GetComponent<ButtonManager>();
+        }
     }
 
     void Update()
@@ -25,9 +36,10 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= (int)damageAmount;
 
         // Check if the enemy is dead
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && damageReceivedText != null)
         {
             Die();
+            damageReceivedText.text = "Damage Received: " + damageAmount.ToString();
         }
         else
         {
@@ -46,6 +58,8 @@ public class EnemyHealth : MonoBehaviour
                 playerHealth.TakeDamage((int)this.damageAmount);
             }
         }
+
+     
     }
 
     void Die()
