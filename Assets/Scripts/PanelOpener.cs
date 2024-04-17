@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PanelOpener : MonoBehaviour
 {
-    public GameObject Panel;
+    public GameObject ShowAlmanac;
 
     public void OpenPanel()
     {
-        if (Panel != null)
+        if (ShowAlmanac != null)
         {
-            bool isActive = Panel.activeSelf;
-            Panel.SetActive(!isActive); 
+            bool isActive = ShowAlmanac.activeSelf;
+            ShowAlmanac.SetActive(!isActive); 
         }
 
     }

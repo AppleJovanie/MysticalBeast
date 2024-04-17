@@ -21,7 +21,7 @@ public class SwitchForAlmanac : MonoBehaviour
     [Header("NobleGas Buttons")]
     public Button previousNobleGasButton;
     public Button nextNobleGasButton;
-
+     
     private int alkaliIndex;
     private int transitionIndex;
     private int nobleGasIndex;

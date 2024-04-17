@@ -7,6 +7,7 @@ public class AttackForPlayer : MonoBehaviour
     [SerializeField] private int damageAmount; // Adjust this value based on your game's balancing
     public KeyCode attackKey = KeyCode.Space; // Change this to the desired attack key
     public GameObject targetEnemy; // Reference to the enemy GameObject
+    public GameObject targetBoss; // Reference to the boss GameObject
     public GameObject panelToDisableAfterAttack;
     public ButtonManager buttonManager;
     public float criticalChance = 0.2f; // Critical hit chance (20%)
@@ -28,6 +29,11 @@ public class AttackForPlayer : MonoBehaviour
     public void SetTargetEnemy(GameObject enemy)
     {
         targetEnemy = enemy;
+    }
+
+    public void SetTargetBoss(GameObject boss)
+    {
+        targetBoss = boss;
     }
 
     public void DisableCanvas()
@@ -78,7 +84,17 @@ public class AttackForPlayer : MonoBehaviour
             damageAmount = criticalDamage;
         }
 
-        if (targetEnemy != null)
+        // Deal damage to the boss if it's the target
+        if (targetBoss != null)
+        {
+            BossEnemyHealth bossHealth = targetBoss.GetComponent<BossEnemyHealth>();
+
+            if (bossHealth != null)
+            {
+                bossHealth.TakeDamage(damageAmount);
+            }
+        }
+        else if (targetEnemy != null) // If the target is not the boss, assume it's a regular enemy
         {
             // Assuming the enemy has an EnemyHealth script attached
             EnemyHealth enemyHealth = targetEnemy.GetComponent<EnemyHealth>();
@@ -100,7 +116,6 @@ public class AttackForPlayer : MonoBehaviour
 
         ResetSnapAreas();
     }
-
 
     IEnumerator FadeOutTextAfterDelay(Text text)
     {

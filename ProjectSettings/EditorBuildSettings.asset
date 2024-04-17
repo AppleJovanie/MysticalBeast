@@ -63,7 +63,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Battles/MAP 2/4.unity
     guid: 32665a3c68262b64a8c073b86d8d7c4d
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MAP 2/MainScene4 1.unity
+    path: Assets/Scenes/MainScenes/MAP 2/MainScene5.unity
     guid: 48bef58b596f8ca4884b1ea839806777
   - enabled: 1
     path: Assets/Scenes/Battles/MAP 2/5.unity
@@ -98,6 +98,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battles/MAP 3/5.unity
     guid: cbedb52c31bbe5d47bf9fb6c0212f032
+  - enabled: 1
+    path: Assets/Scenes/Battles/Boss/BossBattle.unity
+    guid: 1561c8405ca9dfc4ab008bb22e0542b0
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 8d161768593ef3646bf76755b0fea9d2, type: 2}

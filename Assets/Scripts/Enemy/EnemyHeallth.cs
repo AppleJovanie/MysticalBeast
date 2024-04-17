@@ -97,7 +97,7 @@ public class EnemyHealth : MonoBehaviour
     void CounterAttackPlayer()
     {
         // Generate a random damage amount between 4 and 10
-        float randomDamage = Random.Range(5f, 10f);
+        float randomDamage = Random.Range(4f, 6f);
 
         if (player != null)
         {
@@ -108,7 +108,7 @@ public class EnemyHealth : MonoBehaviour
                 playerHealth.TakeDamage((int)randomDamage);
             }
         }
-    }
+    }   
 
 
     void Die()
