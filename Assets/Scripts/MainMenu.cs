@@ -1,21 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    private int sceneToContinue;
+    public void NewGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
+
+    public void ContinueGame()
+    {
+        sceneToContinue = PlayerPrefs.GetInt("SavedScene");
+
+        if (sceneToContinue != 0)
+            SceneManager.LoadScene(sceneToContinue);
+        else
+            return;
+    }
+
+
     public void OptionsMenu()
     {
-
+        // Implement your options menu logic here
     }
+
     public void Quit()
     {
-        Debug.Log("application quit");
+        Debug.Log("Application quit");
         Application.Quit();
     }
 }

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 900192515302221837}
   - component: {fileID: 2121380922946324317}
   - component: {fileID: 4900018167786674562}
+  - component: {fileID: 5974779712016776517}
   m_Layer: 0
-  m_Name: 385533936_3455671481429657_4417904283524882412_n_5
+  m_Name: EnemyIMg
   m_TagString: Hydrogen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5342096271058174271}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.03128187, z: 0, w: 0.99951065}
-  m_LocalPosition: {x: 18.01, y: -0.62820435, z: -5.03}
+  m_LocalRotation: {x: -0, y: -0.70218205, z: 0, w: 0.7119975}
+  m_LocalPosition: {x: 17.99772, y: 0.19999695, z: -5.040958}
   m_LocalScale: {x: 0.22569998, y: 0.22823684, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6679186523707235843}
-  m_LocalEulerAnglesHint: {x: 0, y: 3.585, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.205, z: 0}
 --- !u!212 &2121380922946324317
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 719252569, guid: 78edc54dcb0ebe248941147cffd79d6f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b9c7b694f4fe914daff9123e7f06884, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,6 +107,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8.331635, y: 12.853281, z: 0.8179723}
   m_Center: {x: 0.07018982, y: -2.5420728, z: -0.011674612}
+--- !u!95 &5974779712016776517
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5342096271058174271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1d096e9ac1aab3409c0f5b9e12be5c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7101396519880705131
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,8 +137,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6679186523707235843}
-  - component: {fileID: 7923838830133750950}
-  - component: {fileID: 5914299028724139686}
+  - component: {fileID: 1006783899692052394}
+  - component: {fileID: 7659297738552936576}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Hydrogen
@@ -132,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7101396519880705131}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.041807424, z: -0, w: 0.99912566}
+  m_LocalRotation: {x: 0, y: 0.041805927, z: 0, w: 0.9991258}
   m_LocalPosition: {x: 101.045135, y: 173.73036, z: 159.43105}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -140,7 +162,103 @@ Transform:
   - {fileID: 900192515302221837}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 4.792, z: 0}
---- !u!114 &7923838830133750950
+--- !u!82 &1006783899692052394
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101396519880705131}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6db68a1bd76fcc34387edb6c8c469dbe, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7659297738552936576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,35 +267,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 7101396519880705131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c20e8085b899c3641904788f4aa0baee, type: 3}
+  m_Script: {fileID: 11500000, guid: 58d99c783f696194ea99b23125bad4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  anim: {fileID: 0}
---- !u!54 &5914299028724139686
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7101396519880705131}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 72
-  m_CollisionDetection: 0
+  maxHealth: 100
+  currentHealth: 0
+  player: {fileID: 0}
+  damageAmount: 10
+  delayBeforeDamage: 2
+  youWonPanel: {fileID: 0}
+  blinkDuration: 1
+  blinkInterval: 0.1
+  blinkColor: {r: 1, g: 0, b: 0, a: 1}
+  enemyRenderer: {fileID: 2121380922946324317}
+  damageReceivedText: {fileID: 0}
+  animator: {fileID: 0}
+  audioSource: {fileID: 1006783899692052394}
+  destroyHealth: {fileID: 8300000, guid: 6db68a1bd76fcc34387edb6c8c469dbe, type: 3}

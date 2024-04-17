@@ -12,6 +12,16 @@ TagManager:
   - PotassiumEnemy
   - SodiumEnemy
   - LithiumEnemy
+  - TitaniumEnemy
+  - IronEnemy
+  - CopperEnemy
+  - SilverEnemy
+  - GoldEnemy
+  - Helium
+  - ArgonEnemy
+  - KryptonEnemy
+  - XenonEnemy
+  - NeonEnemy
   layers:
   - Default
   - TransparentFX

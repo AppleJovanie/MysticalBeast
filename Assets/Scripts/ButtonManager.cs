@@ -117,6 +117,4 @@ public class ButtonManager : MonoBehaviour
         }
         currentImages.Clear();
     }
-
-  
 }

@@ -13,6 +13,14 @@ public class Playerhealth : MonoBehaviour
     public ButtonManager buttonManager;
     public GameObject gameOverPanel;
     public Text attackIndicatorText;
+    public Renderer PlayerRenderer;
+    public float blinkDuration = 1f; // Duration for blinking animation
+    public float blinkInterval = 0.1f; // Interval for blinking animation
+    public Color blinkColor = Color.red; // Color for blinking animation
+    private Color originalColor;
+
+    public AudioSource audioSource;
+    public AudioClip playerHitSound; // Sound effect for player taking damage
 
     private Coroutine attackTextCoroutine;
 
@@ -22,7 +30,31 @@ public class Playerhealth : MonoBehaviour
 
         // Update UI text (optional)
         UpdateHealthText();
+
+        // Disable the attack indicator text initially
+        if (attackIndicatorText != null)
+        {
+            attackIndicatorText.gameObject.SetActive(false);
+        }
+
+        // Check if the player should spawn at the saved position
+        if (PlayerPrefs.HasKey("SpawnAtSavedPosition") && PlayerPrefs.GetInt("SpawnAtSavedPosition") == 1)
+        {
+            float x = PlayerPrefs.GetFloat("SavedPositionX");
+            float y = PlayerPrefs.GetFloat("SavedPositionY");
+            float z = PlayerPrefs.GetFloat("SavedPositionZ");
+            transform.position = new Vector3(x, y, z);
+
+            // Clear the spawn flag
+            PlayerPrefs.DeleteKey("SpawnAtSavedPosition");
+        }
+
+        if (PlayerRenderer != null)
+        {
+            originalColor = PlayerRenderer.material.color;
+        }
     }
+
 
     public void TakeDamage(int damage)
     {
@@ -30,6 +62,17 @@ public class Playerhealth : MonoBehaviour
 
         // Update UI text (optional)
         UpdateHealthText();
+
+        if (PlayerRenderer != null)
+        {
+            StartCoroutine(Blink());
+        }
+
+        // Play the sound effect for player taking damage
+        if (audioSource != null && playerHitSound != null)
+        {
+            audioSource.PlayOneShot(playerHitSound);
+        }
 
         if (currentHealth <= 0)
         {
@@ -63,6 +106,24 @@ public class Playerhealth : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         attackIndicatorText.text = ""; // Clear the text
+    }
+
+    IEnumerator Blink()
+    {
+        float timer = 0f;
+        bool isVisible = true;
+
+        while (timer < blinkDuration)
+        {
+            PlayerRenderer.material.color = isVisible ? blinkColor : originalColor;
+            isVisible = !isVisible;
+
+            yield return new WaitForSeconds(blinkInterval);
+            timer += blinkInterval;
+        }
+
+        // Restore the original color after blinking animation
+        PlayerRenderer.material.color = originalColor;
     }
 
     void Die()

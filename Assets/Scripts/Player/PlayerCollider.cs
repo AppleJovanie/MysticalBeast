@@ -5,6 +5,7 @@ public class PlayerCollider : MonoBehaviour
 {
     public GameObject player; // Reference to the player GameObject
     public GameObject AlmanacPanel;
+   
 
     public void ShowAlmanac()
     {
@@ -13,35 +14,80 @@ public class PlayerCollider : MonoBehaviour
             bool isActive = AlmanacPanel.activeSelf;
             AlmanacPanel.SetActive(!isActive);
         }
-
+      
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Hydrogen"))
         {
             SceneManager.LoadScene(2);
-            Debug.Log("Hydrogen");
         }
         if (collision.gameObject.CompareTag("LithiumEnemy"))
         {
             SceneManager.LoadScene(4);
-            Debug.Log("Hydrogen");
+           
         }
         if (collision.gameObject.CompareTag("SodiumEnemy"))
         {
             SceneManager.LoadScene(6);
-            Debug.Log("Hydrogen");
+         
         }
         if (collision.gameObject.CompareTag("PotassiumEnemy"))
         {
             SceneManager.LoadScene(8);
-            Debug.Log("Hydrogen");
+           
         }
         if (collision.gameObject.CompareTag("RubidiumEnemy"))
         {
-            SceneManager.LoadScene(9);
-            Debug.Log("Hydrogen");
+            SceneManager.LoadScene(10);   
         }
+
+        // Map 2
+
+        if (collision.gameObject.CompareTag("TitaniumEnemy"))
+        {
+            SceneManager.LoadScene(12);
+        }
+        if (collision.gameObject.CompareTag("IronEnemy"))
+        {
+            SceneManager.LoadScene(14);
+        }
+        if (collision.gameObject.CompareTag("CopperEnemy"))
+        {
+            SceneManager.LoadScene(16);
+        }
+        if (collision.gameObject.CompareTag("SilverEnemy"))
+        {
+            SceneManager.LoadScene(18);
+        }
+        if (collision.gameObject.CompareTag("GoldEnemy"))
+        {
+            SceneManager.LoadScene(20);
+        }
+
+        // Map 3
+
+        if (collision.gameObject.CompareTag("Helium"))
+        {
+            SceneManager.LoadScene(22);
+        }
+        if (collision.gameObject.CompareTag("NeonEnemy"))
+        {
+            SceneManager.LoadScene(24);
+        }
+        if (collision.gameObject.CompareTag("ArgonEnemy"))
+        {
+            SceneManager.LoadScene(26);
+        }
+        if (collision.gameObject.CompareTag("KryptonEnemy"))
+        {
+            SceneManager.LoadScene(28);
+        }
+        if (collision.gameObject.CompareTag("XenonEnemy"))
+        {
+            SceneManager.LoadScene(30);
+        }
+
     }
 
     private void SaveCheckpointData(Vector3 checkpointPosition, string sceneName)

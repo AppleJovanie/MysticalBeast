@@ -12,32 +12,92 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/MAP 1/MainScene1.unity
     guid: 8912c28c6046b2a4fac45e5c10bf4106
   - enabled: 1
-    path: Assets/Scenes/Stage1Battles/MAP 1/1.unity
+    path: Assets/Scenes/Battles/MAP 1/1.unity
     guid: ad28243bf15fbc9408c217b5c951f819
   - enabled: 1
     path: Assets/Scenes/MainScenes/MAP 1/MainScene2.unity
-    guid: ff5044d9c81c73740b3dd086c0e328cb
+    guid: f3a90ebfd88a3014791c64a7c729ae74
   - enabled: 1
-    path: Assets/Scenes/Stage1Battles/MAP 1/2.unity
+    path: Assets/Scenes/Battles/MAP 1/2.unity
     guid: 5e8aeb194aec0154bafdded84cb42d3d
   - enabled: 1
     path: Assets/Scenes/MainScenes/MAP 1/MainScene3.unity
-    guid: b35034075ef9431449fad528df628191
+    guid: 4ae54918e09e5284e9f6109759ded003
   - enabled: 1
-    path: Assets/Scenes/Stage1Battles/MAP 1/3.unity
+    path: Assets/Scenes/Battles/MAP 1/3.unity
     guid: a37afe12d070a94498ad7a9fd22b1dda
   - enabled: 1
     path: Assets/Scenes/MainScenes/MAP 1/MainScene4.unity
-    guid: 97b048513a20a044da02af2d6e8411b9
+    guid: b03f7488fb7ed904d8ae419fce7b244e
   - enabled: 1
-    path: Assets/Scenes/Stage1Battles/MAP 1/4.unity
+    path: Assets/Scenes/Battles/MAP 1/4.unity
     guid: 5419e78f7fa39a748abccd8fa710bd1d
   - enabled: 1
     path: Assets/Scenes/MainScenes/MAP 1/MainScene5.unity
-    guid: ce472cf74aa778a4f804c10c7b6287a4
+    guid: b7c386887d8e9f44a9527c4ae2574ed2
   - enabled: 1
-    path: Assets/Scenes/Stage1Battles/MAP 1/5.unity
+    path: Assets/Scenes/Battles/MAP 1/5.unity
     guid: 88ca883bdab82ec479a5d725dfc1ed69
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP 2/MainScene1.unity
+    guid: 67bdd1156af124145951c0fc73a448f3
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 2/1.unity
+    guid: fa448d3930e289a4490cdb9452554a55
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP 2/MainScene2.unity
+    guid: 71cf06fdab695764897a1a702e1b53df
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 2/2.unity
+    guid: cb8fe32418d3fec4ba1bd78cb84c007e
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP 2/MainScene3.unity
+    guid: e72f0f7ec4fd62e459249fad43269598
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 2/3.unity
+    guid: d44939347b915da42a4d1c3a697d7135
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP 2/MainScene4.unity
+    guid: 82aeb719bb54b18439a22e898b1f0cbc
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 2/4.unity
+    guid: 32665a3c68262b64a8c073b86d8d7c4d
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP 2/MainScene4 1.unity
+    guid: 48bef58b596f8ca4884b1ea839806777
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 2/5.unity
+    guid: aa6f3c3c4e3f980489ded78f52dfa646
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP3/MainScene1.unity
+    guid: f7e7f6fae0a648345b67fe23201ca185
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 3/1.unity
+    guid: c01944a576aaf834cb5c01c0e649780d
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP3/MainScene2.unity
+    guid: 45e66b5e4d900854784710e185423adc
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 3/2.unity
+    guid: e0d5e1f7a010e7d4e9da283a1b159f13
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP3/MainScene3.unity
+    guid: e2a6f6e3e8f512e48b7b34a8c6856e48
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 3/3.unity
+    guid: 0f8d703e701b29a4995bc03a487b9545
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP3/MainScene4.unity
+    guid: 41d3942333e44b24e939e22835eebdb4
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 3/4.unity
+    guid: 8fb1205d68fb96b428a9548838eb6e40
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/MAP3/MainScene5.unity
+    guid: c1b8accb88e1e8e4f97814e664dd2386
+  - enabled: 1
+    path: Assets/Scenes/Battles/MAP 3/5.unity
+    guid: cbedb52c31bbe5d47bf9fb6c0212f032
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 8d161768593ef3646bf76755b0fea9d2, type: 2}

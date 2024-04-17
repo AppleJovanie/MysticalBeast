@@ -12,44 +12,52 @@ public class Move : MonoBehaviour
     public Animator anim;
     private SpriteRenderer spriteRenderer;
 
+    //FootStep Sound Effect
+    public AudioSource audioSource;
+    public AudioClip footStep;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         moveLeft = false;
         moveRight = false;
-        anim =  GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     public void PointerDownLeft()
     {
         moveLeft = true;
         FlipSprite(true);
+        PlayFootstepSound();
     }
     public void PointerUpLeft()
     {
         moveLeft = false;
+        StopFootstepSound();
     }
     public void PointerDownRight()
     {
         moveRight = true;
         FlipSprite(false);
+        PlayFootstepSound();
     }
     public void PointerUpRight()
     {
         moveRight = false;
+        StopFootstepSound();
     }
 
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();   
+        MovePlayer();
     }
     private void MovePlayer()
     {
         if (moveLeft)
         {
-            anim.SetBool("running",true);
+            anim.SetBool("running", true);
             horizontalMove = -speed;
         }
         else if (moveRight)
@@ -65,10 +73,26 @@ public class Move : MonoBehaviour
     }
     public void FixedUpdate()
     {
-        rb.velocity = new Vector2 (horizontalMove, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
     }
     private void FlipSprite(bool flipLeft)
     {
         spriteRenderer.flipX = flipLeft;
+    }
+
+    private void PlayFootstepSound()
+    {
+        if (footStep != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(footStep);
+        }
+    }
+
+    private void StopFootstepSound()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class AttackForPlayer : MonoBehaviour
 {
-    private int damageAmount; // Adjust this value based on your game's balancing
+    [SerializeField] private int damageAmount; // Adjust this value based on your game's balancing
     public KeyCode attackKey = KeyCode.Space; // Change this to the desired attack key
     public GameObject targetEnemy; // Reference to the enemy GameObject
     public GameObject panelToDisableAfterAttack;
     public ButtonManager buttonManager;
-    public float criticalChance = 0.7f; // Critical hit chance (30%)
+    public float criticalChance = 0.2f; // Critical hit chance (20%)
 
     public Text damageIndicatorText; // Reference to the shared UI Text element
     public Text criticalHitText; // Reference to the text element for critical hit message
@@ -66,6 +66,7 @@ public class AttackForPlayer : MonoBehaviour
             if (criticalHitText != null)
             {
                 criticalHitText.text = "Critical Hit! Critical Damage: " + criticalDamage;
+
                 // Stop previous coroutine if it's running
                 if (criticalHitCoroutine != null)
                 {
