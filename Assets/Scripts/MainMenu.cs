@@ -1,24 +1,44 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    private int sceneToContinue;
+    private void Start()
+    {
+        // Check if there's saved data for the game
+        if (PlayerPrefs.HasKey("SavedSceneIndex"))
+        {
+            // Enable the Continue button
+            continueButton.interactable = true;
+        }
+        else
+        {
+            // Disable the Continue button if there's no saved data
+            continueButton.interactable = false;
+        }
+    }
+    public Button continueButton;
     public void NewGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1); // Load the first game scene
     }
 
     public void ContinueGame()
     {
-        sceneToContinue = PlayerPrefs.GetInt("SavedScene");
-
-        if (sceneToContinue != 0)
-            SceneManager.LoadScene(sceneToContinue);
+        // Check if there's saved data for the game
+        if (PlayerPrefs.HasKey("SavedSceneIndex"))
+        {
+            // Load the game using the saved scene index
+            int savedSceneIndex = PlayerPrefs.GetInt("SavedSceneIndex");
+            SceneManager.LoadScene(savedSceneIndex);
+        }
         else
-            return;
+        {
+            // If there's no saved data, start a new game
+            NewGame();
+        }
     }
-
 
     public void OptionsMenu()
     {

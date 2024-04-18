@@ -2223,6 +2223,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 787398482}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &795578110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 71.25105
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 171.72762
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 154.13809
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302539530394604278, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4795f352b08f1645a64074872be4eee, type: 3}
 --- !u!1 &800912164
 GameObject:
   m_ObjectHideFlags: 0
@@ -3909,6 +3977,11 @@ PrefabInstance:
       propertyPath: panelToDisableAfterAttack
       value: 
       objectReference: {fileID: 1791122625}
+    - target: {fileID: 5060613688408976906, guid: 6dfdb3510f692a748a7d3ca95ee39cfc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5630754282680367165, guid: 6dfdb3510f692a748a7d3ca95ee39cfc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4450,7 +4523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: Kenji
 --- !u!222 &1439461040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6649,3 +6722,4 @@ SceneRoots:
   - {fileID: 1467069201}
   - {fileID: 51681061}
   - {fileID: 1894840734}
+  - {fileID: 795578110}

@@ -2940,6 +2940,7 @@ MonoBehaviour:
   damageAmount: 0
   attackKey: 32
   targetEnemy: {fileID: 2108135877}
+  targetBoss: {fileID: 0}
   panelToDisableAfterAttack: {fileID: 1791122625}
   buttonManager: {fileID: 51681060}
   criticalChance: 0.3
@@ -3041,7 +3042,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: Kenji
 --- !u!222 &1439461040
 CanvasRenderer:
   m_ObjectHideFlags: 0

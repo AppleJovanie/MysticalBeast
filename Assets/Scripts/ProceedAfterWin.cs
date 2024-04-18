@@ -72,6 +72,10 @@ public class ProceedAfterWin : MonoBehaviour
     }
     public void ProceedAfterXenon()
     {
-        SceneManager.LoadScene(31); // DIRECT TO CONTGRATS SCENE
+        SceneManager.LoadScene(31); // DIRECT TO BOSS SCENE
+    }
+    public void DirectToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

@@ -2791,6 +2791,7 @@ MonoBehaviour:
   damageAmount: 0
   attackKey: 32
   targetEnemy: {fileID: 2108135877}
+  targetBoss: {fileID: 0}
   panelToDisableAfterAttack: {fileID: 1791122625}
   buttonManager: {fileID: 51681060}
   criticalChance: 0.3
@@ -2892,7 +2893,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player
+  m_Text: Kenji
 --- !u!222 &1439461040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3476,6 +3477,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791122625}
   m_CullTransparentMesh: 1
+--- !u!1001 &1836969186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 71.25105
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 171.72762
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 154.13809
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508837300766186790, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302539530394604278, guid: b4795f352b08f1645a64074872be4eee,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4795f352b08f1645a64074872be4eee, type: 3}
 --- !u!1 &1860221889
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,3 +4689,4 @@ SceneRoots:
   - {fileID: 51681061}
   - {fileID: 1894840734}
   - {fileID: 1547216160}
+  - {fileID: 1836969186}
