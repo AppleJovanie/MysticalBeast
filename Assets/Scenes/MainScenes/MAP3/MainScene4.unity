@@ -673,32 +673,32 @@ PrefabInstance:
     - target: {fileID: 900192515302221837, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.8297
+      value: 8.830833
       objectReference: {fileID: 0}
     - target: {fileID: 900192515302221837, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7962
+      value: -0.7962036
       objectReference: {fileID: 0}
     - target: {fileID: 900192515302221837, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.4468
+      value: -4.448882
       objectReference: {fileID: 0}
     - target: {fileID: 900192515302221837, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999496
+      value: 0.99978876
       objectReference: {fileID: 0}
     - target: {fileID: 900192515302221837, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.010043785
+      value: 0.020552952
       objectReference: {fileID: 0}
     - target: {fileID: 900192515302221837, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -1.151
+      value: 2.355
       objectReference: {fileID: 0}
     - target: {fileID: 2121380922946324317, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
@@ -730,6 +730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -0.011674614
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342096271058174271, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
+        type: 3}
+      propertyPath: m_TagString
+      value: KryptonEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 5974779712016776517, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
@@ -2333,6 +2338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337485273593060576, guid: 17e54ce2468136c408082a76a641418c,
+        type: 3}
+      propertyPath: m_Text
+      value: RESUME
       objectReference: {fileID: 0}
     - target: {fileID: 8347229978338362188, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}

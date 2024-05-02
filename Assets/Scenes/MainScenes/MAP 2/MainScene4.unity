@@ -1951,6 +1951,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0790980ee3f10834ebd5b8a0a579badb,
         type: 3}
+    - target: {fileID: 5342096271058174271, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
+        type: 3}
+      propertyPath: m_TagString
+      value: RubidiumEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6679186523707235843, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3064,6 +3069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337485273593060576, guid: 17e54ce2468136c408082a76a641418c,
+        type: 3}
+      propertyPath: m_Text
+      value: RESUME
       objectReference: {fileID: 0}
     - target: {fileID: 8347229978338362188, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}

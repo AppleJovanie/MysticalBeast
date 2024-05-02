@@ -4,21 +4,22 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Button continueButton;
     private void Start()
     {
-        // Check if there's saved data for the game
+        // Check if there is a saved scene index in PlayerPrefs
         if (PlayerPrefs.HasKey("SavedSceneIndex"))
         {
-            // Enable the Continue button
+            // Enable the continue button if there's saved data
             continueButton.interactable = true;
         }
         else
         {
-            // Disable the Continue button if there's no saved data
+            // Disable the continue button if there's no saved data
             continueButton.interactable = false;
         }
     }
-    public Button continueButton;
+  
     public void NewGame()
     {
         SceneManager.LoadScene(1); // Load the first game scene
@@ -26,17 +27,15 @@ public class MainMenu : MonoBehaviour
 
     public void ContinueGame()
     {
-        // Check if there's saved data for the game
         if (PlayerPrefs.HasKey("SavedSceneIndex"))
         {
-            // Load the game using the saved scene index
             int savedSceneIndex = PlayerPrefs.GetInt("SavedSceneIndex");
             SceneManager.LoadScene(savedSceneIndex);
         }
         else
         {
-            // If there's no saved data, start a new game
-            NewGame();
+            Debug.Log("No saved data found. Starting a new game.");
+            SceneManager.LoadScene(1); // Fallback to new game if no saved data
         }
     }
 

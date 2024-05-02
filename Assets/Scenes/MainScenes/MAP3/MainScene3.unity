@@ -588,6 +588,11 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.44526002
       objectReference: {fileID: 0}
+    - target: {fileID: 5342096271058174271, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
+        type: 3}
+      propertyPath: m_TagString
+      value: ArgonEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5974779712016776517, guid: 9b3cafa9e2014044aa8e4cbee79be3df,
         type: 3}
       propertyPath: m_Enabled
@@ -2228,6 +2233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337485273593060576, guid: 17e54ce2468136c408082a76a641418c,
+        type: 3}
+      propertyPath: m_Text
+      value: RESUME
       objectReference: {fileID: 0}
     - target: {fileID: 8347229978338362188, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}

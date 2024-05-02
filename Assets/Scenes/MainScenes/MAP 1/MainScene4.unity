@@ -6363,6 +6363,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 229151433}
+    - target: {fileID: 2279783754738854937, guid: 17e54ce2468136c408082a76a641418c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2294660010761102393, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}
       propertyPath: m_IsActive
@@ -6486,7 +6491,7 @@ PrefabInstance:
     - target: {fileID: 6558413065182419430, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6620981736497849501, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}
@@ -6506,7 +6511,7 @@ PrefabInstance:
     - target: {fileID: 6824809727053745732, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7001521848679738708, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}
@@ -6631,7 +6636,12 @@ PrefabInstance:
     - target: {fileID: 8247333521817521615, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337485273593060576, guid: 17e54ce2468136c408082a76a641418c,
+        type: 3}
+      propertyPath: m_Text
+      value: RESUME
       objectReference: {fileID: 0}
     - target: {fileID: 8347229978338362188, guid: 17e54ce2468136c408082a76a641418c,
         type: 3}
@@ -6712,6 +6722,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2562270643296377747, guid: 6dfdb3510f692a748a7d3ca95ee39cfc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5630754282680367165, guid: 6dfdb3510f692a748a7d3ca95ee39cfc,
         type: 3}
       propertyPath: m_LocalPosition.x

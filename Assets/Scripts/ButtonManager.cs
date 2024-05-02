@@ -17,8 +17,9 @@ public class ButtonManager : MonoBehaviour
 
     void Start()
     {
-        HideImages();
+       
         HideAttackButton();
+        SetCardElementsInteractable(true);
     }
 
     void Update()
@@ -32,9 +33,8 @@ public class ButtonManager : MonoBehaviour
         {
             HideAttackButton();
         }
-
-    
     }
+   
 
     public void Hydrogen()
     {
@@ -58,6 +58,53 @@ public class ButtonManager : MonoBehaviour
     {
         ShowNextImage(4);
     }
+    // Map 2
+    
+    public void Iron()
+    {
+        ShowNextImage(5);
+    }
+    public void Copper()
+    {
+        ShowNextImage(6);
+    }
+    public void Silver()
+    {
+        ShowNextImage(7);
+    }
+    public void Titanium()
+    {
+        ShowNextImage(8);
+    }
+    public void Gold()
+    {
+        ShowNextImage(9);
+    }
+
+    // Map3
+    public void Xenon()
+    {
+        ShowNextImage(10);
+    }
+    public void Argon()
+    {
+        ShowNextImage(11);
+    }
+    public void Neon()
+    {
+        ShowNextImage(12);
+    }
+    public void Helium()
+    {
+        ShowNextImage(13);
+    }
+    public void Krypton()
+    {
+        ShowNextImage(14);
+    }
+
+
+
 
     //Elements buttons
 
@@ -93,9 +140,27 @@ public class ButtonManager : MonoBehaviour
     void ShowAttackButton()
     {
         attackBtn.SetActive(true);
+        SetCardElementsInteractable(false);
+    }
+    public void SetCardElementsInteractable(bool isInteractable)
+    {
+        foreach (var card in CardsToHide)
+        {
+            var button = card.GetComponent<Button>();
+            if (button != null)
+            {
+                button.interactable = isInteractable; // Set the interactability
+            }
+
+            var collider = card.GetComponent<Collider>();
+            if (collider != null)
+            {
+                collider.enabled = isInteractable; // Enable/disable collider
+            }
+        }
     }
 
-    void HideAttackButton()
+        void HideAttackButton()
     {
         attackBtn.SetActive(false);
     }
@@ -110,11 +175,58 @@ public class ButtonManager : MonoBehaviour
 
     public void HideImages()
     {
-        // Destroy the current images if they exist
+        List<Image> imagesToClear = new List<Image>();
+
+        // Iterate through the currentImages list to identify images in SnapArea1 or SnapArea2
         foreach (Image image in currentImages)
         {
-            Destroy(image.gameObject);
+            if (image != null)
+            {
+                if (image.transform.parent.gameObject.CompareTag("SnapArea1") ||
+                    image.transform.parent.gameObject.CompareTag("SnapArea2"))
+                {
+                    imagesToClear.Add(image);
+                }
+            }
         }
-        currentImages.Clear();
+
+        // Destroy the images that need to be cleared
+        foreach (Image image in imagesToClear)
+        {
+            if (image != null)
+            {
+                Destroy(image.gameObject);
+                currentImages.Remove(image);
+            }
+        }
+       
     }
+
+    public void ClearSnapAreas()
+    {
+        // Clear all children in SnapArea1 and SnapArea2
+        foreach (var snapArea in snapPointAreas)
+        {
+            if (snapArea.gameObject.CompareTag("SnapArea1") ||
+                snapArea.gameObject.CompareTag("SnapArea2"))
+            {
+                foreach (Transform child in snapArea)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+        }
+
+        // Update the `currentImages` list
+        currentImages.RemoveAll(image => image != null 
+                                        && (image.transform.parent.CompareTag("SnapArea1") 
+                                        || image.transform.parent.CompareTag("SnapArea2")));
+
+            SetCardElementsInteractable(true);
+        
+    }
+
+
+ 
+
 }

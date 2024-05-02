@@ -8,24 +8,24 @@ public class ProceedAfterWin : MonoBehaviour
     //Map 1
     public void ProceedAfterHydrogen()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
     public void ProceedAfterLithium()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
     public void ProceedAfterSodium()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(8);
     }
     public void ProceedAfterPotassium()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(10);
     }
 
     public void ProceedAfterRubidium()
     {
-        SceneManager.LoadScene(11);  // Proceed to the next map
+        SceneManager.LoadScene(12);  // Proceed to the next map
     }
 
 
@@ -33,46 +33,46 @@ public class ProceedAfterWin : MonoBehaviour
 
     public void ProceedAfterTitanium()
     {
-        SceneManager.LoadScene(13);  
+        SceneManager.LoadScene(14);  
     }
     public void ProceedAfterIron()
     {
-        SceneManager.LoadScene(15);  
+        SceneManager.LoadScene(16);  
     }
     public void ProceedAfterCopper()
     {
-        SceneManager.LoadScene(17);  
+        SceneManager.LoadScene(18);  
     }
     public void ProceedAfterSilver()
     {
-        SceneManager.LoadScene(19);  
+        SceneManager.LoadScene(20);  
     }
     public void ProceedAfterGold()
     {
-        SceneManager.LoadScene(21);  // Proceed to the next map
+        SceneManager.LoadScene(22);  // Proceed to the next map
     }
 
     // Map 3
 
     public void ProceedAfterHelium()
     {
-        SceneManager.LoadScene(23);
+        SceneManager.LoadScene(24);
     }
     public void ProceedAfterNeon()
     {
-        SceneManager.LoadScene(25);
+        SceneManager.LoadScene(26);
     }
     public void ProceedAfterArgon()
     {
-        SceneManager.LoadScene(27);
+        SceneManager.LoadScene(28);
     }
     public void ProceedAfterKrypton()
     {
-        SceneManager.LoadScene(29);
+        SceneManager.LoadScene(30);
     }
     public void ProceedAfterXenon()
     {
-        SceneManager.LoadScene(31); // DIRECT TO BOSS SCENE
+        SceneManager.LoadScene(32); // DIRECT TO BOSS SCENE
     }
     public void DirectToMainMenu()
     {

@@ -20,72 +20,72 @@ public class PlayerCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Hydrogen"))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
         if (collision.gameObject.CompareTag("LithiumEnemy"))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
            
         }
         if (collision.gameObject.CompareTag("SodiumEnemy"))
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(7);
          
         }
         if (collision.gameObject.CompareTag("PotassiumEnemy"))
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(9);
            
         }
         if (collision.gameObject.CompareTag("RubidiumEnemy"))
         {
-            SceneManager.LoadScene(10);   
+            SceneManager.LoadScene(11);   
         }
 
         // Map 2
 
         if (collision.gameObject.CompareTag("TitaniumEnemy"))
         {
-            SceneManager.LoadScene(12);
+            SceneManager.LoadScene(13);
         }
         if (collision.gameObject.CompareTag("IronEnemy"))
         {
-            SceneManager.LoadScene(14);
+            SceneManager.LoadScene(15);
         }
         if (collision.gameObject.CompareTag("CopperEnemy"))
         {
-            SceneManager.LoadScene(16);
+            SceneManager.LoadScene(17);
         }
         if (collision.gameObject.CompareTag("SilverEnemy"))
         {
-            SceneManager.LoadScene(18);
+            SceneManager.LoadScene(19);
         }
         if (collision.gameObject.CompareTag("GoldEnemy"))
         {
-            SceneManager.LoadScene(20);
+            SceneManager.LoadScene(21);
         }
 
         // Map 3
 
         if (collision.gameObject.CompareTag("Helium"))
         {
-            SceneManager.LoadScene(22);
+            SceneManager.LoadScene(23);
         }
         if (collision.gameObject.CompareTag("NeonEnemy"))
         {
-            SceneManager.LoadScene(24);
+            SceneManager.LoadScene(25);
         }
         if (collision.gameObject.CompareTag("ArgonEnemy"))
         {
-            SceneManager.LoadScene(26);
+            SceneManager.LoadScene(27);
         }
         if (collision.gameObject.CompareTag("KryptonEnemy"))
         {
-            SceneManager.LoadScene(28);
+            SceneManager.LoadScene(29);
         }
         if (collision.gameObject.CompareTag("XenonEnemy"))
         {
-            SceneManager.LoadScene(30);
+            SceneManager.LoadScene(31);
         }
 
     }

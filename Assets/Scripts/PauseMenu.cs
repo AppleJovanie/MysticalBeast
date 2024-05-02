@@ -18,23 +18,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Save()
     {
-        // Save current scene index
-        PlayerPrefs.SetInt("SavedSceneIndex", SceneManager.GetActiveScene().buildIndex);
+        // Save the current scene index
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("SavedSceneIndex", currentSceneIndex);
 
-        // Save player position
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            Vector3 playerPos = player.transform.position;
-            PlayerPrefs.SetFloat("PlayerPosX", playerPos.x);
-            PlayerPrefs.SetFloat("PlayerPosY", playerPos.y);
-            PlayerPrefs.SetFloat("PlayerPosZ", playerPos.z);
-        }
-
-        // Save PlayerPrefs
-        PlayerPrefs.Save();
-
-        Debug.Log("game saved");
+        Debug.Log($"Game progress saved. Current scene index: {currentSceneIndex}");
     }
 
     public void Resume()

@@ -10,7 +10,6 @@ public class Playerhealth : MonoBehaviour
 
     public Text healthText; // Reference to a UI text element to display health (optional)
     public GameObject panelToEnableAfterDamage; // Reference to the panel you want to enable
-    public ButtonManager buttonManager;
     public GameObject gameOverPanel;
     public Text attackIndicatorText;
     public Renderer PlayerRenderer;
@@ -23,10 +22,17 @@ public class Playerhealth : MonoBehaviour
     public AudioClip playerHitSound; // Sound effect for player taking damage
 
     private Coroutine attackTextCoroutine;
+    public GameObject player;
+
+    public ButtonManager btnManager; // Reference to Button Manager
+
+    // Added boolean to check if damage was received
+    private bool hasTakenDamage = false;
 
     void Start()
     {
         currentHealth = maxHealth;
+       
 
         // Update UI text (optional)
         UpdateHealthText();
@@ -63,8 +69,11 @@ public class Playerhealth : MonoBehaviour
         // Update UI text (optional)
         UpdateHealthText();
 
+        
+
         if (PlayerRenderer != null)
         {
+            
             StartCoroutine(Blink());
         }
 
@@ -77,9 +86,15 @@ public class Playerhealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+
         }
         else
         {
+            // Re-enable card elements to allow interaction when it's the player's turn to attack
+            Debug.Log("Test");
+            btnManager.SetCardElementsInteractable(true); // Allow interaction
+            
+
             // Enable the panel after taking damage
             EnablePanelAfterDamage();
 
@@ -87,6 +102,7 @@ public class Playerhealth : MonoBehaviour
             if (attackIndicatorText != null)
             {
                 // Reset text visibility
+
                 attackIndicatorText.gameObject.SetActive(true);
                 attackIndicatorText.text = "Your Turn to Attack!";
 
@@ -98,6 +114,8 @@ public class Playerhealth : MonoBehaviour
                 attackTextCoroutine = StartCoroutine(FadeOutAttackText());
             }
         }
+
+
     }
 
     IEnumerator FadeOutAttackText()
@@ -143,7 +161,7 @@ public class Playerhealth : MonoBehaviour
 
     public void GoToMenu()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 
     void UpdateHealthText()
@@ -167,9 +185,10 @@ public class Playerhealth : MonoBehaviour
     void ResetSnapAreas()
     {
         // Reset snap areas logic goes here
-        if (buttonManager != null)
+        if (btnManager != null)
         {
-            buttonManager.HideImages(); // Call the HideImages method from the ButtonManager
+            
+            btnManager.HideImages(); // Call the HideImages method from the ButtonManager
         }
     }
 }
